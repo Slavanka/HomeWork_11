@@ -9,9 +9,11 @@ import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 
-public class firstTest {
-    @Test
-     void firstTest() {
+
+public class FirstTest {
+
+   @Test
+     void firstTestForm() {
         open ("https://demoqa.com/automation-practice-form");
         //заполняеи поле имя
         $("[id=firstName]").setValue("Vitoriia");
@@ -51,8 +53,7 @@ public class firstTest {
         $("[for=hobbies-checkbox-1]").click();
 
         //загрузка файла
-       $("#uploadPicture").uploadFile(new File("src/test/java/guru.qa/resources/cv.png"));
-
+        $("#uploadPicture").uploadFile(new File("src/test/java/resources/cv.png"));
         $("[id=currentAddress]").setValue("Moscow Kremlin"); //пишем адрес
         $("#state").click();
         $(byText("NCR")).click();   //выбираем значение из списка Штат
