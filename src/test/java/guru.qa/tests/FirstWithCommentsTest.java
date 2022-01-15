@@ -1,4 +1,4 @@
-package guru.qa;
+package guru.qa.tests;
 
 import org.junit.jupiter.api.Test;
 
@@ -10,7 +10,8 @@ import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 
 
-public class FirstTest {
+
+public class FirstWithCommentsTest {
 
    @Test
      void firstTestForm() {
