@@ -4,12 +4,14 @@ import com.github.javafaker.Faker;
 import guru.qa.pages.RegistrationPage;
 import org.junit.jupiter.api.Test;
 
+import java.util.Locale;
+
 
 public class FirstWithPageTest extends TestBase {
 
     @Test
     void checkStudentRegistration() {
-        Faker faker = new Faker();
+        Faker faker = new Faker(new Locale("ru"));
         RegistrationPage registrationPage = new RegistrationPage();
 
         String name = faker.name().firstName();
