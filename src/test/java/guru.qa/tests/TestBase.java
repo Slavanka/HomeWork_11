@@ -1,12 +1,12 @@
 package guru.qa.tests;
 
 import com.codeborne.selenide.Configuration;
-import guru.qa.pages.RegistrationsPages;
+import guru.qa.pages.RegistrationPage;
 import org.junit.jupiter.api.BeforeAll;
 
 public class TestBase {
 
-    RegistrationsPages registrationsPages =  new RegistrationsPages();
+    RegistrationPage registrationPages = new RegistrationPage();
 
     @BeforeAll
     static void setUp() {
