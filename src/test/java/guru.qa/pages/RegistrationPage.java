@@ -2,6 +2,7 @@ package guru.qa.pages;
 
 import com.codeborne.selenide.SelenideElement;
 import com.codeborne.selenide.WebDriverRunner;
+
 import org.junit.jupiter.api.Assertions;
 import org.openqa.selenium.interactions.Actions;
 
@@ -27,6 +28,8 @@ public class RegistrationPage {
             submitButton = $("button#submit"),
             tableAfterRegistration = $("table[class*='table']"),
             submitTitle = $x("//div[contains(text(), 'Thanks for submit')]");
+
+
 
 
     //Actions
@@ -57,14 +60,6 @@ public class RegistrationPage {
 
     public RegistrationPage setInputPhone(String numberPhone) {
         phone.setValue(numberPhone);
-        return this;
-    }
-
-    public RegistrationPage setInputDateOfBirth(String month, String year) {
-        $("#dateOfBirthInput").click();
-        $(".react-datepicker__month-select").selectOption(month);
-        $(".react-datepicker__year-select").selectOption(year);
-        $(".react-datepicker__day--030:not(.react-datepicker__day--outside-month)").click();
         return this;
     }
 

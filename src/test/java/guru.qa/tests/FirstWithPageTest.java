@@ -19,8 +19,6 @@ public class FirstWithPageTest extends TestBase {
         String address = faker.address().streetAddress();
         String subject = "Biology";
         String gender = "Female";
-        String year = "1988";
-        String month = "November";
         String image = "cv.png";
 
         registrationPage
@@ -32,7 +30,6 @@ public class FirstWithPageTest extends TestBase {
                 .clickCheckBoxFemale()
                 .setInputEmail(email)
                 .setInputPhone(phone)
-                .setInputDateOfBirth(month, year)
                 .chooseSubject(subject)
                 .clickCheckBoxHobbies()
                 .upLoadImageOnPage(image)
@@ -48,8 +45,6 @@ public class FirstWithPageTest extends TestBase {
                 .assertTableAfterRegistrationHave(email)
                 .assertTableAfterRegistrationHave(gender)
                 .assertTableAfterRegistrationHave(phone)
-                .assertTableAfterRegistrationHave(month)
-                .assertTableAfterRegistrationHave(year)
                 .assertTableAfterRegistrationHave(subject)
                 .assertTableAfterRegistrationHave(address)
                 .assertTableAfterRegistrationHave(image);
