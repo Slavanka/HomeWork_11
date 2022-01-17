@@ -11,7 +11,7 @@ public class FirstWithPageTest extends TestBase {
 
     @Test
     void checkStudentRegistration() {
-        Faker faker = new Faker(new Locale("ru"));
+        Faker faker = new Faker(new Locale("ko"));
         RegistrationPage registrationPage = new RegistrationPage();
 
         String name = faker.name().firstName();
