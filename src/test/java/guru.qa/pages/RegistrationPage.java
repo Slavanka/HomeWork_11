@@ -30,9 +30,6 @@ public class RegistrationPage {
             submitTitle = $x("//div[contains(text(), 'Thanks for submit')]");
 
 
-
-
-
     public RegistrationPage clickCheckBoxFemale() {
         Actions actions = new Actions(WebDriverRunner.getWebDriver());
         actions.moveToElement(checkBoxFemale).click().build().perform();

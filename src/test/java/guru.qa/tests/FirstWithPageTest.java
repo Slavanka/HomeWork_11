@@ -52,7 +52,7 @@ public class FirstWithPageTest extends TestBase {
                 .assertTableAfterRegistrationHave(phone)
                 .assertTableAfterRegistrationHave(subject)
                 .assertTableAfterRegistrationHave(address);
-                //.assertTableAfterRegistrationHave(image);
+        //.assertTableAfterRegistrationHave(image);
 
     }
 }
