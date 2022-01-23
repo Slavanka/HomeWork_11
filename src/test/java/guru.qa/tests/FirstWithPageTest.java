@@ -37,7 +37,7 @@ public class FirstWithPageTest extends TestBase {
                 .setInputPhone(phone)
                 .chooseSubject(subject)
                 .clickCheckBoxHobbies()
-                .upLoadImageOnPage(image)
+                //.upLoadImageOnPage(image)
                 .setAddressInTextarea(address)
                 .chooseState()
                 .chooseCity()

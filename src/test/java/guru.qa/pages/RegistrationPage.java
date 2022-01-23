@@ -32,9 +32,6 @@ public class RegistrationPage {
 
 
 
-    //Actions
-//    public void openPage() {open("https://demoqa.com/automation-practice-form");
-//    }
 
     public RegistrationPage clickCheckBoxFemale() {
         Actions actions = new Actions(WebDriverRunner.getWebDriver());
@@ -75,10 +72,10 @@ public class RegistrationPage {
         return this;
     }
 
-    public RegistrationPage upLoadImageOnPage(String imagePath) {
-        upLoadPictures.uploadFromClasspath(imagePath);
-        return this;
-    }
+//    public RegistrationPage upLoadImageOnPage(String imagePath) {
+//        upLoadPictures.uploadFromClasspath(imagePath);
+//        return this;
+//    }
 
     public RegistrationPage setAddressInTextarea(String addressStreet) {
         address.setValue(addressStreet);
