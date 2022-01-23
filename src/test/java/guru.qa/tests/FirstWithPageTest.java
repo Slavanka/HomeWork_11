@@ -24,7 +24,7 @@ public class FirstWithPageTest extends TestBase {
         String address = faker.address().streetAddress();
         String subject = "Biology";
         String gender = "Female";
-        String image = "cv.png";
+//        String image = "cv.png";
 
 //        registrationPage
 //                .openPage();
@@ -51,8 +51,8 @@ public class FirstWithPageTest extends TestBase {
                 .assertTableAfterRegistrationHave(gender)
                 .assertTableAfterRegistrationHave(phone)
                 .assertTableAfterRegistrationHave(subject)
-                .assertTableAfterRegistrationHave(address)
-                .assertTableAfterRegistrationHave(image);
+                .assertTableAfterRegistrationHave(address);
+                //.assertTableAfterRegistrationHave(image);
 
     }
 }
