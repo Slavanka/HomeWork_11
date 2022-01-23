@@ -6,11 +6,14 @@ import org.junit.jupiter.api.Test;
 
 import java.util.Locale;
 
+import static com.codeborne.selenide.Selenide.open;
+
 
 public class FirstWithPageTest extends TestBase {
 
     @Test
     void checkStudentRegistration() {
+        open("/automation-practice-form");
         Faker faker = new Faker(new Locale("ko"));
         RegistrationPage registrationPage = new RegistrationPage();
 
@@ -23,8 +26,8 @@ public class FirstWithPageTest extends TestBase {
         String gender = "Female";
         String image = "cv.png";
 
-        registrationPage
-                .openPage();
+//        registrationPage
+//                .openPage();
 
         registrationPage
                 .setInputName(name)

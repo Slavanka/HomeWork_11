@@ -33,9 +33,8 @@ public class RegistrationPage {
 
 
     //Actions
-    public void openPage() {
-        open("https://demoqa.com/automation-practice-form");
-    }
+//    public void openPage() {open("https://demoqa.com/automation-practice-form");
+//    }
 
     public RegistrationPage clickCheckBoxFemale() {
         Actions actions = new Actions(WebDriverRunner.getWebDriver());
