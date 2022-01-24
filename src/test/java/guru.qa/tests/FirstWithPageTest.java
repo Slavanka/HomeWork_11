@@ -13,7 +13,8 @@ public class FirstWithPageTest extends TestBase {
 
     @Test
     void checkStudentRegistration() {
-        open("/automation-practice-form");
+        //open("/automation-practice-form");
+
         Faker faker = new Faker(new Locale("ru"));
         RegistrationPage registrationPage = new RegistrationPage();
 
