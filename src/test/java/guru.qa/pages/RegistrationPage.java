@@ -119,12 +119,13 @@ public class RegistrationPage {
 
 
     //examination
-    @Step("Проверяем правильность заполнения")
+    @Step("Проверяем что-то, не знаю что..списала у кого-то когда-то , а теперь не помню, что это")
     public RegistrationPage assertSubmitTitleIsVisible() {
         Assertions.assertTrue(submitTitle.isDisplayed());
         return this;
     }
 
+    @Step("Аналогично предыдущему")
     public RegistrationPage assertTableAfterRegistrationHave(String value) {
         tableAfterRegistration.shouldHave(text(value));
         return this;
