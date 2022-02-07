@@ -2,19 +2,22 @@ package guru.qa.tests;
 
 import com.github.javafaker.Faker;
 import guru.qa.pages.RegistrationPage;
+import io.qameta.allure.Link;
+import io.qameta.allure.Severity;
+import io.qameta.allure.SeverityLevel;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import java.util.Locale;
-
-import static com.codeborne.selenide.Selenide.open;
 
 
 public class FirstWithPageTest extends TestBase {
 
     @Test
+    @DisplayName("Тест заполнения формы регистрации студента")
+    @Severity(SeverityLevel.BLOCKER)
+    @Link(value = "Форма регистрации", url = "https://demoqa.com/automation-practice-form")
     void checkStudentRegistration() {
-        //open("/automation-practice-form");
-
         Faker faker = new Faker(new Locale("ru"));
         RegistrationPage registrationPage = new RegistrationPage();
 
@@ -31,6 +34,7 @@ public class FirstWithPageTest extends TestBase {
 //                .openPage();
 
         registrationPage
+                .openPage()
                 .setInputName(name)
                 .setInputLastName(lastName)
                 .clickCheckBoxFemale()
