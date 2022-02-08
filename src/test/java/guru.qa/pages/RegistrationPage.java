@@ -119,7 +119,7 @@ public class RegistrationPage {
 
 
     //examination
-    @Step("Проверяем что-то, не знаю что..списала у кого-то когда-то , а теперь не помню, что это")
+    @Step("Проверяем что-то, не знаю что..списала у кого-то когда-то, а теперь не помню, что это")
     public RegistrationPage assertSubmitTitleIsVisible() {
         Assertions.assertTrue(submitTitle.isDisplayed());
         return this;
