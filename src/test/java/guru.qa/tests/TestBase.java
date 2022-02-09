@@ -17,12 +17,13 @@ public class TestBase {
 
     @BeforeAll
     static void setUp() {
-        String browser = System.getProperty("browser");
-        String version = System.getProperty("version");
-        Configuration.browserSize = System.getProperty("browserSize");
+        String browser = System.getProperty("browser", "chrome");
+        String version = System.getProperty("browserVersion", "91");
+        Configuration.browserSize = System.getProperty("browserSize", "1920x1080");
         String login = System.getProperty("login","user1");
         String password = System.getProperty("password","1234");
         String url = System.getProperty("url");
+        Configuration.remote = System.getProperty ("remote_driver_url", "https://user1:1234@selenoid.autotests.cloud/wd/hub");
         String remoteUrl = "https://" + login + ":" + password + "@" + url;
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
