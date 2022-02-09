@@ -17,8 +17,8 @@ public class TestBase {
 
     @BeforeAll
     static void setUp() {
-        String browser = System.getProperty("browser", "chrome", "opera","firefox");
-        String version = System.getProperty("version", "91", "75", "97");
+        String browser = System.getProperty("browser", "chrome");
+        String version = System.getProperty("version", "91");
         Configuration.browserSize = System.getProperty("browserSize", "1280x1024");
         String login = System.getProperty("login","user1");
         String password = System.getProperty("password","1234");
