@@ -19,7 +19,7 @@ public class TestBase {
     static void setUp() {
         String browser = System.getProperty("browser", "chrome");
         String version = System.getProperty("version", "91");
-        Configuration.browserSize = System.getProperty("browserSize", "1280x1024");
+        Configuration.browserSize = System.getProperty("browserSize", "1920x1080");
         String login = System.getProperty("login","user1");
         String password = System.getProperty("password","1234");
         String url = System.getProperty("url");
