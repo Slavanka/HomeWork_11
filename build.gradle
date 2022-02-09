@@ -33,17 +33,25 @@ dependencies {
             "io.qameta.allure:allure-selenide:$allureVersion",
             'com.github.javafaker:javafaker:1.0.2',
             "org.junit.jupiter:junit-jupiter-api:$junitVersion")
-    testRuntimeOnly ('org.slf4j:slf4j-simple:1.7.35',
+    testRuntimeOnly (
+            'org.slf4j:slf4j-simple:1.7.35',
             "org.junit.jupiter:junit-jupiter-engine:$junitVersion")
 }
 
 tasks.withType(Test) {
     useJUnitPlatform()
+    systemProperties(System.getProperties())
 
     testLogging {
         lifecycle {
             events "started", "skipped", "failed", "standard_error", "standard_out"
             exceptionFormat "short"
         }
+    }
+}
+
+task properties_tests(type: Test) {
+    useJUnitPlatform{
+        includeTags "properties"
     }
 }

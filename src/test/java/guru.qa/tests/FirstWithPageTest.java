@@ -6,6 +6,7 @@ import io.qameta.allure.Link;
 import io.qameta.allure.Severity;
 import io.qameta.allure.SeverityLevel;
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
 import java.util.Locale;
@@ -13,6 +14,7 @@ import java.util.Locale;
 
 public class FirstWithPageTest extends TestBase {
 
+    @Tag("properties")
     @Test
     @DisplayName("Тест заполнения формы регистрации студента")
     @Severity(SeverityLevel.BLOCKER)
