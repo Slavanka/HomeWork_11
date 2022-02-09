@@ -17,23 +17,17 @@ public class TestBase {
 
     @BeforeAll
     static void setUp() {
+        SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
+
+        Configuration.baseUrl = "https://demoqa.com";
         Configuration.browser = System.getProperty("browser", "chrome");
-        Configuration.browserVersion = System.getProperty("browserVersion", "91");
-        Configuration.browserSize = System.getProperty("browserSize", "1920x1080");
-
-        String remoteUrl = System.getProperty("remoteUrl");
-        String user = System.getProperty("user");
+        Configuration.browserVersion = System.getProperty("version", "91");
+        Configuration.browserSize = System.getProperty("size", "1920x1080");
+        String url = System.getProperty("url");
+        String login = System.getProperty("login");
         String password = System.getProperty("password");
-        Configuration.remote = "https://" + user + ":" + password + "@" + remoteUrl;
-        Configuration.remote = System.getProperty ("remote_driver_url", "https://user1:1234@selenoid.autotests.cloud/wd/hub");
+        Configuration.remote = "https://"+login+":"+password+"@"+url;
 
-//        String login = System.getProperty("login","user1");
-//        String password = System.getProperty("password","1234");
-//        String url = System.getProperty("url");
-//        Configuration.browserSize = System.getProperty("browserSize", "1920x1080");
-//        String remoteUrl = System.getProperty("remoteUrl");
-//        //Configuration.remote = System.getProperty ("remote_driver_url", "https://user1:1234@selenoid.autotests.cloud/wd/hub");
-//        String remoteUrl = "https://" + login + ":" + password + "@" + url;
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("enableVNC",true);
