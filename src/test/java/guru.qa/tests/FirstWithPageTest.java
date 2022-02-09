@@ -18,7 +18,7 @@ public class FirstWithPageTest extends TestBase {
     @Test
     @DisplayName("Тест заполнения формы регистрации студента")
     @Severity(SeverityLevel.BLOCKER)
-    @Link(value = "Форма регистрации", url = "https://demoqa.com/automation-practice-form")
+    //@Link(value = "Форма регистрации", url = "https://demoqa.com/automation-practice-form")
     void checkStudentRegistration() {
         Faker faker = new Faker(new Locale("ru"));
         RegistrationPage registrationPage = new RegistrationPage();
