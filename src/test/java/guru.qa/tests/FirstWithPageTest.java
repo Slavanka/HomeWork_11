@@ -16,7 +16,8 @@ public class FirstWithPageTest extends TestBase {
 
     @Tag("properties")
     @Test
-    @DisplayName("Тест заполнения формы регистрации студента")
+    @DisplayName("Тест заполнения формы регистрации студента" +
+            "нта")
     @Severity(SeverityLevel.BLOCKER)
     //@Link(value = "Форма регистрации", url = "https://demoqa.com/automation-practice-form")
     void checkStudentRegistration() {
