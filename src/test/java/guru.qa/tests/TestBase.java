@@ -26,7 +26,8 @@ public class TestBase {
         String url = System.getProperty("url");
         String login = System.getProperty("login");
         String password = System.getProperty("password");
-        Configuration.remote = "https://"+login+":"+password+"@"+url;
+        //Configuration.remote = "https://"+login+":"+password+"@"+url;
+        Configuration.remote = "https://" + login + ":" + password + "@" + url;
 
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
